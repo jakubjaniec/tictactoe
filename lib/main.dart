@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 
 import 'field.dart';
+import 'winnerModal.dart';
 
-void main() => runApp(MaterialApp(home: TicTacToe()));
+void main() => runApp(MaterialApp(home: Phoenix(child: TicTacToe())));
 
 class TicTacToe extends StatefulWidget {
   @override
@@ -11,6 +13,7 @@ class TicTacToe extends StatefulWidget {
 
 class _TicTacToeState extends State<TicTacToe> {
   bool xMove = true;
+  String winner = '';
 
   var movesList = List.generate(3, (i) => List(3), growable: false);
 
@@ -31,25 +34,43 @@ class _TicTacToeState extends State<TicTacToe> {
     checkWinner();
   }
 
+  void showModal() async {
+    await Modal.winnerModal(context, winner, resetGame);
+  }
+
+  void resetGame() {
+    Phoenix.rebirth(context);
+  }
+
   void checkWinner() {
     for (int i = 0; i < 3; i++) {
       // horizontal check
       if (movesList[i][0] == 'X' &&
           movesList[i][1] == 'X' &&
           movesList[i][2] == 'X')
-        print('X WON!');
+        setState(() {
+          winner = 'X';
+        });
       else if (movesList[i][0] == 'O' &&
           movesList[i][1] == 'O' &&
-          movesList[i][2] == 'O') print('O WON!');
+          movesList[i][2] == 'O')
+        setState(() {
+          winner = 'O';
+        });
 
       // vertical check
       if (movesList[0][i] == 'X' &&
           movesList[1][i] == 'X' &&
           movesList[2][i] == 'X')
-        print('X WON!');
+        setState(() {
+          winner = 'X';
+        });
       else if (movesList[0][i] == 'O' &&
           movesList[1][i] == 'O' &&
-          movesList[2][i] == 'O') print('O WON!');
+          movesList[2][i] == 'O')
+        setState(() {
+          winner = 'O';
+        });
 
       // cross check
       if ((movesList[0][0] == 'X' &&
@@ -58,19 +79,24 @@ class _TicTacToeState extends State<TicTacToe> {
           (movesList[0][2] == 'X' &&
               movesList[1][1] == 'X' &&
               movesList[2][0] == 'X'))
-        print('X WON!');
+        setState(() {
+          winner = 'X';
+        });
       else if ((movesList[0][0] == 'O' &&
               movesList[1][1] == 'O' &&
               movesList[2][2] == 'O') ||
           (movesList[0][2] == 'O' &&
               movesList[1][1] == 'O' &&
-              movesList[2][0] == 'O')) print('O WON!');
+              movesList[2][0] == 'O'))
+        setState(() {
+          winner = 'O';
+        });
     }
+    if (winner != '') showModal();
   }
 
   @override
   Widget build(BuildContext context) {
-    // print(movesList);
     return Scaffold(
       body: Flex(
         direction: Axis.vertical,
