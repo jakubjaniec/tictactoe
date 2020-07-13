@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 
 import 'field.dart';
-import 'winnerModal.dart';
+import 'modals.dart';
 
 void main() => runApp(MaterialApp(home: Phoenix(child: TicTacToe())));
 
@@ -14,6 +14,8 @@ class TicTacToe extends StatefulWidget {
 class _TicTacToeState extends State<TicTacToe> {
   bool xMove = true;
   String winner = '';
+  bool draw = false;
+  int movesCounter = 0;
 
   var movesList = List.generate(3, (i) => List(3), growable: false);
 
@@ -30,15 +32,18 @@ class _TicTacToeState extends State<TicTacToe> {
 
     setState(() {
       xMove = !xMove;
+      movesCounter++;
     });
     checkWinner();
   }
 
   void showModal() async {
-    await Modal.winnerModal(context, winner, resetGame);
+    draw
+        ? await Modal.drawModal(context, restartGame)
+        : await Modal.winnerModal(context, winner, restartGame);
   }
 
-  void resetGame() {
+  void restartGame() {
     Phoenix.rebirth(context);
   }
 
@@ -92,7 +97,12 @@ class _TicTacToeState extends State<TicTacToe> {
           winner = 'O';
         });
     }
-    if (winner != '') showModal();
+    if (winner == '' && movesCounter == 9)
+      setState(() {
+        draw = true;
+      });
+
+    if (winner != '' || draw == true) showModal();
   }
 
   @override
