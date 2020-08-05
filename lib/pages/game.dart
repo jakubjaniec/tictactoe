@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'components/modals.dart';
-// import 'components/shapes.dart';
-import 'components/board.dart';
-import 'components/results.dart';
+import '../components/modals.dart';
+import '../components/whoseMove.dart';
+import '../components/board.dart';
+import '../components/results.dart';
+import '../components/backBtn.dart';
 
 class Game extends StatefulWidget {
   @override
@@ -141,14 +142,20 @@ class _GameState extends State<Game> {
       backgroundColor: Colors.grey[850],
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-                child: Text(
-              'It\'s X move',
-              style: TextStyle(color: Colors.grey[500], fontSize: 22),
-            )),
-            Board(saveChoice, movesList, restart, changeRestart),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                BackBtn(),
+              ],
+            ),
+            Column(
+              children: [
+                WhoseMove(xMove),
+                Board(saveChoice, movesList, restart, changeRestart),
+              ],
+            ),
             Results(xWins, oWins, draws),
           ],
         ),

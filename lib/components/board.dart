@@ -18,13 +18,12 @@ class _BoardState extends State<Board> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 40),
       width: 350,
       height: 350,
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Field(widget.saveChoice, widget.movesList, 0, 0, widget.restart,
                   widget.changeRestart),
@@ -35,7 +34,6 @@ class _BoardState extends State<Board> {
             ],
           ),
           Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Field(widget.saveChoice, widget.movesList, 1, 0, widget.restart,
                   widget.changeRestart),
@@ -46,7 +44,6 @@ class _BoardState extends State<Board> {
             ],
           ),
           Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Field(widget.saveChoice, widget.movesList, 2, 0, widget.restart,
                   widget.changeRestart),
