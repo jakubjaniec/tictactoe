@@ -19,8 +19,8 @@ class _BoardState extends State<Board> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 40),
-      width: 350,
-      height: 350,
+      width: 250,
+      height: 250,
       child: Column(
         children: [
           Row(

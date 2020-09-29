@@ -14,15 +14,15 @@ class WhoseMove extends StatelessWidget {
       children: [
         Text(
           'It\'s',
-          style: TextStyle(color: Colors.grey[500], fontSize: 22),
+          style: TextStyle(color: Colors.grey[500], fontSize: 20),
         ),
         xMove
-            ? XSign(35)
+            ? XSign(30)
             : Container(
-                margin: EdgeInsets.symmetric(horizontal: 5), child: Circle(35)),
+                margin: EdgeInsets.symmetric(horizontal: 5), child: Circle(30)),
         Text(
           'move',
-          style: TextStyle(color: Colors.grey[500], fontSize: 22),
+          style: TextStyle(color: Colors.grey[500], fontSize: 20),
         )
       ],
     );

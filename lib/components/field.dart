@@ -66,16 +66,16 @@ class _FieldState extends State<Field> {
     }
 
     return Container(
-      width: 350 / 3,
-      height: 350 / 3,
+      width: 250 / 3,
+      height: 250 / 3,
       decoration: BoxDecoration(border: determineBorder()),
       child: FlatButton(
         onPressed: disabled ? null : handleClick,
         child: disabled
             ? (widget.movesList[widget.row][widget.place] == 'X'
-                ? XSign(80)
+                ? XSign(50)
                 : widget.movesList[widget.row][widget.place] == 'O'
-                    ? Circle(80)
+                    ? Circle(50)
                     : null)
             : null,
       ),

@@ -6,26 +6,11 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[850],
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            FlatButton(
-                textColor: Colors.white,
-                color: Colors.transparent,
-                onPressed: () {
-                  Navigator.pushNamed(context, '/game');
-                },
-                child: Text('play',
-                    style: TextStyle(fontSize: 26, letterSpacing: 1.5))),
-            FlatButton(
-                textColor: Colors.grey[400],
-                color: Colors.transparent,
-                onPressed: () {
-                  // Navigator.pushNamed(context, '/game');
-                },
-                child: Text('settings',
-                    style: TextStyle(fontSize: 26, letterSpacing: 1.5))),
-          ],
+        child: IconButton(
+          onPressed: () => Navigator.pushNamed(context, '/game'),
+          icon: Icon(Icons.play_arrow),
+          color: Colors.white,
+          iconSize: 100,
         ),
       ),
     );

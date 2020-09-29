@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:device_preview/device_preview.dart';
 
 import 'pages/game.dart';
 import 'pages/home.dart';
 
 void main() {
-  runApp(TicTacToe());
+  runApp(
+    DevicePreview(enabled: true, builder: (context) => TicTacToe()),
+  );
 }
 
 class TicTacToe extends StatelessWidget {
