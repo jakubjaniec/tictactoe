@@ -7,9 +7,7 @@ class XSign extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Icon(Icons.close, size: shapeSize, color: Colors.lightBlue[800]),
-    );
+    return Icon(Icons.close, size: shapeSize, color: Colors.lightBlue[800]);
   }
 }
 
@@ -20,9 +18,7 @@ class Circle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Icon(Icons.panorama_fish_eye,
-          size: shapeSize, color: Colors.yellow[700]),
-    );
+    return Icon(Icons.panorama_fish_eye,
+        size: shapeSize, color: Colors.yellow[700]);
   }
 }

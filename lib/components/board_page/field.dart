@@ -4,7 +4,7 @@ import 'dart:async';
 import 'package:provider/provider.dart';
 import 'package:TicTacToe/model.dart';
 
-import 'package:TicTacToe/components/board_page/shapes.dart';
+import 'package:TicTacToe/components/general/shapes.dart';
 
 class Field extends StatefulWidget {
   final int row;
