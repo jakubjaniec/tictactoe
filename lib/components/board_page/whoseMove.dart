@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:TicTacToe/model.dart';
+import 'package:provider/provider.dart';
 
-import 'shapes.dart';
+import 'package:TicTacToe/components/board_page/shapes.dart';
 
 class WhoseMove extends StatelessWidget {
-  final bool xMove;
-
-  WhoseMove(this.xMove);
-
   @override
   Widget build(BuildContext context) {
+    var state = Provider.of<Model>(context, listen: true);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -16,7 +15,7 @@ class WhoseMove extends StatelessWidget {
           'It\'s',
           style: TextStyle(color: Colors.grey[500], fontSize: 20),
         ),
-        xMove
+        state.xMove
             ? XSign(30)
             : Container(
                 margin: EdgeInsets.symmetric(horizontal: 5), child: Circle(30)),

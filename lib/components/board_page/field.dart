@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
-import 'shapes.dart';
+import 'package:provider/provider.dart';
+import 'package:TicTacToe/model.dart';
+
+import 'package:TicTacToe/components/board_page/shapes.dart';
 
 class Field extends StatefulWidget {
-  final Function saveChoice;
-  final List movesList;
   final int row;
   final int place;
-  final bool restart;
-  final Function changeRestart;
 
-  Field(this.saveChoice, this.movesList, this.row, this.place, this.restart,
-      this.changeRestart);
+  Field(this.row, this.place);
 
   @override
   _FieldState createState() => _FieldState();
@@ -20,8 +19,8 @@ class Field extends StatefulWidget {
 class _FieldState extends State<Field> {
   bool disabled = false;
 
-  void handleClick() {
-    widget.saveChoice(widget.row, widget.place);
+  void handleClick(saveChoice, context) {
+    saveChoice(widget.row, widget.place, context);
 
     setState(() {
       disabled = true;
@@ -58,10 +57,13 @@ class _FieldState extends State<Field> {
 
   @override
   Widget build(BuildContext context) {
-    if (widget.restart) {
-      widget.changeRestart();
-      setState(() {
-        disabled = false;
+    var state = Provider.of<Model>(context, listen: true);
+    if (state.restart) {
+      Timer(Duration(milliseconds: 1), () {
+        setState(() {
+          disabled = false;
+        });
+        state.changeRestart();
       });
     }
 
@@ -70,11 +72,12 @@ class _FieldState extends State<Field> {
       height: 250 / 3,
       decoration: BoxDecoration(border: determineBorder()),
       child: FlatButton(
-        onPressed: disabled ? null : handleClick,
+        onPressed:
+            disabled ? null : () => handleClick(state.saveChoice, context),
         child: disabled
-            ? (widget.movesList[widget.row][widget.place] == 'X'
+            ? (state.movesList[widget.row][widget.place] == 'X'
                 ? XSign(50)
-                : widget.movesList[widget.row][widget.place] == 'O'
+                : state.movesList[widget.row][widget.place] == 'O'
                     ? Circle(50)
                     : null)
             : null,

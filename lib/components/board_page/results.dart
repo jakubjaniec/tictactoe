@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:provider/provider.dart';
+import 'package:TicTacToe/model.dart';
+
 class Results extends StatelessWidget {
-  final int xWins;
-  final int oWins;
-  final int draws;
-
-  Results(this.xWins, this.oWins, this.draws);
-
   TextStyle playerName() {
     return TextStyle(fontSize: 18, color: Colors.grey[500]);
   }
@@ -21,6 +18,8 @@ class Results extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var state = Provider.of<Model>(context, listen: true);
+
     return Container(
       margin: EdgeInsets.only(bottom: 30, top: 30),
       child: Row(
@@ -30,21 +29,21 @@ class Results extends StatelessWidget {
             children: [
               Text('Player 1', style: playerName()),
               SizedBox(height: 8),
-              Text('$xWins', style: score())
+              Text('${state.xWins}', style: score())
             ],
           ),
           Column(
             children: [
               Text('Draws', style: playerName()),
               SizedBox(height: 8),
-              Text('$draws', style: score())
+              Text('${state.draws}', style: score())
             ],
           ),
           Column(
             children: [
               Text('Player 2', style: playerName()),
               SizedBox(height: 8),
-              Text('$oWins', style: score())
+              Text('${state.oWins}', style: score())
             ],
           ),
         ],

@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:provider/provider.dart';
 
 import 'pages/game.dart';
 import 'pages/home.dart';
+import './model.dart';
 
 void main() {
   runApp(
-    DevicePreview(enabled: true, builder: (context) => TicTacToe()),
+    ChangeNotifierProvider.value(
+        value: Model(),
+        child: DevicePreview(enabled: true, builder: (context) => TicTacToe())),
   );
 }
 
