@@ -1,16 +1,18 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 import 'package:TicTacToe/model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:TicTacToe/components/general/shapes.dart';
 
 class Field extends StatefulWidget {
   final int row;
   final int place;
+  final double size;
 
-  Field(this.row, this.place);
+  Field(this.row, this.place, this.size);
 
   @override
   _FieldState createState() => _FieldState();
@@ -68,17 +70,17 @@ class _FieldState extends State<Field> {
     }
 
     return Container(
-      width: 250 / 3,
-      height: 250 / 3,
+      width: widget.size / 3,
+      height: widget.size / 3,
       decoration: BoxDecoration(border: determineBorder()),
       child: FlatButton(
         onPressed:
             disabled ? null : () => handleClick(state.saveChoice, context),
         child: disabled
             ? (state.movesList[widget.row][widget.place] == 'X'
-                ? XSign(50)
+                ? XSign(65.sp)
                 : state.movesList[widget.row][widget.place] == 'O'
-                    ? Circle(50)
+                    ? Circle(60.sp)
                     : null)
             : null,
       ),

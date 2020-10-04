@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 import 'package:TicTacToe/model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Results extends StatelessWidget {
   TextStyle playerName() {
-    return TextStyle(fontSize: 18, color: Colors.grey[500]);
+    return TextStyle(fontSize: 18.sp, color: Colors.grey[500]);
   }
 
   TextStyle score() {
     return TextStyle(
-      fontSize: 36,
+      fontSize: 48.sp,
       color: Colors.white,
       fontWeight: FontWeight.w200,
     );

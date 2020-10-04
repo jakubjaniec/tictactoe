@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:provider/provider.dart';
 
-import 'pages/game.dart';
-import 'pages/home.dart';
-import './model.dart';
+import 'package:TicTacToe/pages/game.dart';
+import 'package:TicTacToe/pages/home.dart';
+import 'package:TicTacToe/model.dart';
 
 void main() {
   runApp(
@@ -17,9 +17,13 @@ void main() {
 class TicTacToe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(initialRoute: '/', routes: {
-      '/': (context) => Home(),
-      '/game': (context) => Game(),
-    });
+    return MaterialApp(
+        locale: DevicePreview.of(context).locale,
+        builder: DevicePreview.appBuilder,
+        initialRoute: '/',
+        routes: {
+          '/': (context) => Home(),
+          '/game': (context) => Game(),
+        });
   }
 }
