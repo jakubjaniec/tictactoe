@@ -22,6 +22,14 @@ Project is created with:
 - Flutter_screenutil version: 3.1.0
 - Device_preview version: 0.4.8
 
+## Screenshots
+
+<img src="assets/screenshots/tictactoe-ss1.png" width="200">
+<img src="assets/screenshots/tictactoe-ss2.png" width="200">
+
+
+
+
 ## Setup
 
 To run this project follow these steps:
