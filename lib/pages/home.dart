@@ -10,10 +10,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenUtil.init(context, designSize: Size(411.0, 731.0));
 
-    var width = MediaQuery.of(context).size.width;
+    // var width = MediaQuery.of(context).size.width;
     var orientation = MediaQuery.of(context).orientation;
 
-    var deviceType = width >= 600 ? 'tablet' : 'mobile';
+    // var deviceType = width >= 600 ? 'tablet' : 'mobile';
 
     return Scaffold(
       backgroundColor: Colors.grey[850],
