@@ -24,8 +24,7 @@ Project is created with:
 
 ## Screenshots
 
-<img src="assets/screenshots/tictactoe-ss1.png" width="200">
-<img src="assets/screenshots/tictactoe-ss2.png" width="200">
+<img src="assets/screenshots/tictactoe-ss1.png" width="200"> <img src="assets/screenshots/tictactoe-ss2.png" width="200">
 
 
 
