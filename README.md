@@ -17,11 +17,11 @@ The purpose of this project was to practice Flutter development by creating simp
 
 Project is created with:
 
-- Flutter version: 1.20.0
-- Dart version: 2.9.0
-- Provider version: 4.3.2+2
-- Flutter_screenutil version: 3.1.0
-- Device_preview version: 0.4.8
+- [Flutter](https://flutter.dev/) version: 1.20.0
+- [Dart](https://dart.dev/) version: 2.9.0
+- [Provider](https://pub.dev/packages/provider) version: 4.3.2+2
+- [Flutter_screenutil](https://pub.dev/packages/flutter_screenutil) version: 3.1.0
+- [Device_preview](https://pub.dev/packages/device_preview) version: 0.4.8
 
 ## Screenshots
 
