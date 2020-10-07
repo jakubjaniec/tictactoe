@@ -6,6 +6,7 @@ Simple game created in Flutter
 
 - [General info](#general-info)
 - [Technologies](#technologies)
+- [Screenshots](#screenshots)
 - [Setup](#setup)
 
 ## General info
@@ -21,6 +22,10 @@ Project is created with:
 - Provider version: 4.3.2+2
 - Flutter_screenutil version: 3.1.0
 - Device_preview version: 0.4.8
+
+## Screenshots
+
+<img src="assets/screenshots/tictactoe-ss1.png" width="200"> <img src="assets/screenshots/tictactoe-ss2.png" width="200"> <img src="assets/screenshots/tictactoe-ss3.png" width="200">
 
 ## Setup
 

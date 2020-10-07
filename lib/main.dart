@@ -4,12 +4,12 @@ import 'package:provider/provider.dart';
 
 import 'package:TicTacToe/pages/game.dart';
 import 'package:TicTacToe/pages/home.dart';
-import 'package:TicTacToe/model.dart';
+import 'package:TicTacToe/game_model.dart';
 
 void main() {
   runApp(
     ChangeNotifierProvider.value(
-        value: Model(),
+        value: GameModel(),
         child: DevicePreview(enabled: true, builder: (context) => TicTacToe())),
   );
 }

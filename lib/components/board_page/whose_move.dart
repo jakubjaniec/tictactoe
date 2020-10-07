@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:TicTacToe/model.dart';
-import 'package:provider/provider.dart';
 
+import 'package:provider/provider.dart';
+import 'package:TicTacToe/game_model.dart';
 import 'package:TicTacToe/components/general/shapes.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WhoseMove extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var state = Provider.of<Model>(context, listen: true);
+    var state = Provider.of<GameModel>(context, listen: true);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

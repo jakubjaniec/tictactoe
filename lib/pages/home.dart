@@ -9,17 +9,12 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context, designSize: Size(411.0, 731.0));
-
-    // var width = MediaQuery.of(context).size.width;
-    var orientation = MediaQuery.of(context).orientation;
-
-    // var deviceType = width >= 600 ? 'tablet' : 'mobile';
+    Orientation orientation = MediaQuery.of(context).orientation;
 
     return Scaffold(
       backgroundColor: Colors.grey[850],
       body: SafeArea(
         child: Container(
-          // padding: EdgeInsets.only(bottom: 40.sp, top: 50.sp),
           padding: orientation == Orientation.portrait
               ? EdgeInsets.only(bottom: 40.sp, top: 50.sp)
               : EdgeInsets.only(bottom: 10.sp, top: 10.sp),
