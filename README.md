@@ -1,19 +1,19 @@
-# Tic-Tac-Toe
+# :beginner: Tic-Tac-Toe
 
-Simple game created in Flutter
+Simple mobile game created in Flutter.
 
-## Table of contents
+## :book: Table of contents
 
 - [General info](#general-info)
 - [Technologies](#technologies)
 - [Screenshots](#screenshots)
 - [Setup](#setup)
 
-## General info
+## :pencil: General info
 
 The purpose of this project was to practice Flutter development by creating simple mobile game.
 
-## Technologies
+## :gear: Technologies
 
 Project is created with:
 
@@ -23,11 +23,11 @@ Project is created with:
 - [Flutter_screenutil](https://pub.dev/packages/flutter_screenutil) version: 3.1.0
 - [Device_preview](https://pub.dev/packages/device_preview) version: 0.4.8
 
-## Screenshots
+## :camera_flash: Screenshots
 
 <img src="assets/screenshots/tictactoe-ss1.png" width="200"> <img src="assets/screenshots/tictactoe-ss2.png" width="200"> <img src="assets/screenshots/tictactoe-ss3.png" width="200">
 
-## Setup
+## :computer: Setup
 
 To run this project follow these steps:
 
