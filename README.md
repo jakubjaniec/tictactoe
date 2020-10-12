@@ -25,7 +25,7 @@ Project is created with:
 
 ## :camera_flash: Screenshots
 
-<img src="assets/screenshots/tictactoe-ss1.png" width="200"> <img src="assets/screenshots/tictactoe-ss2.png" width="200"> <img src="assets/screenshots/tictactoe-ss3.png" width="200">
+<img src="assets/screenshots/tictactoe-ss1.png" width="230"> <img src="assets/screenshots/tictactoe-ss2.png" width="230"> <img src="assets/screenshots/tictactoe-ss3.png" width="230">
 
 ## :computer: Setup
 
