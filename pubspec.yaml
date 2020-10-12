@@ -20,6 +20,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.8.0"
 
 flutter:
   uses-material-design: true
@@ -29,3 +30,11 @@ flutter:
       fonts:
         - asset: fonts/Montserrat-Regular.ttf
           weight: 400
+
+flutter_icons:
+  ios: true
+  android: true
+  image_path_ios: "assets/launcher/icon.png"
+  image_path_android: "assets/launcher/icon.png"
+  adaptive_icon_background: "#343537"
+  adaptive_icon_foreground: assets/launcher/ic_foreground.png

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:TicTacToe/components/board_page/field.dart';
+import 'package:TicTacToe/components/game_page/field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Board extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:TicTacToe/components/board_page/result_modals.dart';
+import 'package:TicTacToe/components/game_page/result_modals.dart';
 
 class GameModel extends ChangeNotifier {
   bool xMove = true;
@@ -70,9 +70,9 @@ class GameModel extends ChangeNotifier {
   }
 
   void showModal(context) async {
-    draw
-        ? await Modal.drawModal(context, restartGame)
-        : await Modal.winnerModal(context, winner, restartGame);
+    if (winner != '' || draw)
+      await ResultModal.modal(context, winner, draw, restartGame);
+
     notifyListeners();
   }
 
@@ -84,7 +84,6 @@ class GameModel extends ChangeNotifier {
     if (draw) draws++;
 
     restart = true;
-    xMove = !xMove;
     winner = '';
     draw = false;
     movesCounter = 0;

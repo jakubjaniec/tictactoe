@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:TicTacToe/components/board_page/whose_move.dart';
-import 'package:TicTacToe/components/board_page/board.dart';
-import 'package:TicTacToe/components/board_page/results.dart';
-import 'package:TicTacToe/components/board_page/back_btn.dart';
+import 'package:TicTacToe/components/game_page/whose_move.dart';
+import 'package:TicTacToe/components/game_page/board.dart';
+import 'package:TicTacToe/components/game_page/results.dart';
+import 'package:TicTacToe/components/game_page/back_btn.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Game extends StatelessWidget {
