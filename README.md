@@ -34,13 +34,13 @@ To run this project follow these steps:
 1. Clone the repository
 
 ```
-$ git clone https://github.com/kubacarbon/TicTacToe.git
+$ git clone https://github.com/kubacarbon/tictactoe.git
 ```
 
 2. Open the project
 
 ```
-$ cd TicTacToe
+$ cd tictactoe
 ```
 
 3. Install dependencies
