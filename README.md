@@ -28,7 +28,7 @@ Project is created with:
 
 ## :camera_flash: Screenshots
 
-<img src="assets/screenshots/tictactoe-ss1.png" width="200"> <img src="assets/screenshots/tictactoe-ss2.png" width="200"> <img src="assets/screenshots/tictactoe-ss3.png" width="200">
+<img src="assets/screenshots/tictactoe-ss1.png" width="230"> <img src="assets/screenshots/tictactoe-ss2.png" width="230"> <img src="assets/screenshots/tictactoe-ss3.png" width="230">
 
 ## :computer: Setup
 
@@ -37,13 +37,13 @@ To run this project follow these steps:
 1. Clone the repository
 
 ```
-$ git clone https://github.com/kubacarbon/TicTacToe.git
+$ git clone https://github.com/kubacarbon/tictactoe.git
 ```
 
 2. Open the project
 
 ```
-$ cd TicTacToe
+$ cd tictactoe
 ```
 
 3. Install dependencies
