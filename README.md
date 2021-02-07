@@ -19,9 +19,12 @@ Project is created with:
 
 - [Flutter](https://flutter.dev/) version: 1.20.0
 - [Dart](https://dart.dev/) version: 2.9.0
-- [Provider](https://pub.dev/packages/provider) version: 4.3.2+2
-- [Flutter_screenutil](https://pub.dev/packages/flutter_screenutil) version: 3.1.0
-- [Device_preview](https://pub.dev/packages/device_preview) version: 0.4.8
+- [Provider](https://pub.dev/packages/provider) version: 4.3.3
+- [Customprompt](https://pub.dev/packages/customprompt) version: 0.2.6+9
+- [Line_awesome_flutter](https://pub.dev/packages/line_awesome_flutter) version: 1.0.1
+- [Flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons) version: 0.8.0
+- [Lint](https://pub.dev/packages/lint) version: 1.3.0
+- [Device_preview](https://pub.dev/packages/device_preview) version: 0.5.5
 
 ## :camera_flash: Screenshots
 
