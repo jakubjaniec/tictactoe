@@ -26,11 +26,6 @@ Project is created with:
 - [Lint](https://pub.dev/packages/lint) version: 1.3.0
 - [Device_preview](https://pub.dev/packages/device_preview) version: 0.5.5
 
-## :camera_flash: Screenshots
-
-<img src="assets/screenshots/tictactoe-ss1.png" width="230"> <img src="assets/screenshots/tictactoe-ss2.png" width="230"> <img src="assets/screenshots/tictactoe-ss3.png" width="230">
-
-## :computer: Setup
 
 To run this project follow these steps:
 
