@@ -1,24 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart' as service;
+
 import 'package:device_preview/device_preview.dart';
 import 'package:provider/provider.dart';
 
-import 'package:TicTacToe/pages/game.dart';
-import 'package:TicTacToe/pages/home.dart';
-import 'package:TicTacToe/model.dart';
+import 'package:TicTacToe/views/game.dart';
+import 'package:TicTacToe/views/home.dart';
+import 'package:TicTacToe/providers/game_provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider.value(
-        value: Model(),
-        child: DevicePreview(enabled: true, builder: (context) => TicTacToe())),
+    ChangeNotifierProvider(
+        create: (context) => GameProvider(),
+        child: DevicePreview(
+          enabled: !kReleaseMode,
+          builder: (context) => TicTacToe(),
+        )),
   );
 }
 
 class TicTacToe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    service.SystemChrome.setPreferredOrientations([
+      service.DeviceOrientation.portraitUp,
+      service.DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp(
-        locale: DevicePreview.of(context).locale,
+        debugShowCheckedModeBanner: false,
+        locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
         initialRoute: '/',
         routes: {

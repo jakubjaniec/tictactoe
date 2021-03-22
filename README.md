@@ -1,48 +1,44 @@
-# Tic-Tac-Toe
+# :beginner: Tic-Tac-Toe
 
-Simple game created in Flutter
+Simple mobile game created in Flutter.
 
-## Table of contents
+## :book: Table of contents
 
 - [General info](#general-info)
 - [Technologies](#technologies)
+- [Screenshots](#screenshots)
 - [Setup](#setup)
 
-## General info
+## :pencil: General info
 
 The purpose of this project was to practice Flutter development by creating simple mobile game.
 
-## Technologies
+## :gear: Technologies
 
 Project is created with:
 
-- Flutter version: 1.20.0
-- Dart version: 2.9.0
-- Provider version: 4.3.2+2
-- Flutter_screenutil version: 3.1.0
-- Device_preview version: 0.4.8
+- [Flutter](https://flutter.dev/) version: 1.20.0
+- [Dart](https://dart.dev/) version: 2.9.0
+- [Provider](https://pub.dev/packages/provider) version: 4.3.3
+- [Customprompt](https://pub.dev/packages/customprompt) version: 0.2.6+9
+- [Line_awesome_flutter](https://pub.dev/packages/line_awesome_flutter) version: 1.0.1
+- [Flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons) version: 0.8.0
+- [Lint](https://pub.dev/packages/lint) version: 1.3.0
+- [Device_preview](https://pub.dev/packages/device_preview) version: 0.5.5
 
-## Screenshots
-
-<img src="assets/screenshots/tictactoe-ss1.png" width="200"> <img src="assets/screenshots/tictactoe-ss2.png" width="200">
-
-
-
-
-## Setup
 
 To run this project follow these steps:
 
 1. Clone the repository
 
 ```
-$ git clone https://github.com/kubacarbon/TicTacToe.git
+$ git clone https://github.com/kubacarbon/tictactoe.git
 ```
 
 2. Open the project
 
 ```
-$ cd TicTacToe
+$ cd tictactoe
 ```
 
 3. Install dependencies
