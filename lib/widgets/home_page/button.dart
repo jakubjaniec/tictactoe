@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:TicTacToe/providers/game_provider.dart';
+import 'package:tictactoe/providers/game_provider.dart';
 
 class Button extends StatelessWidget {
   final String text;
@@ -17,17 +17,19 @@ class Button extends StatelessWidget {
       margin: EdgeInsets.only(top: size.height * 0.04),
       width: size.width * 0.5,
       height: size.height * 0.05,
-      child: FlatButton(
+      child: TextButton(
         onPressed: () => Navigator.pushNamed(context, '/game'),
-        shape: text != 'settings'
-            ? RoundedRectangleBorder(
-                side: BorderSide(
-                  color: color,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(100.0),
-              )
-            : null,
+        style: TextButton.styleFrom(
+          shape: text != 'settings'
+              ? RoundedRectangleBorder(
+                  side: BorderSide(
+                    color: color,
+                    width: 2,
+                  ),
+                  borderRadius: BorderRadius.circular(100.0),
+                )
+              : null,
+        ),
         child: Text(
           text,
           style: TextStyle(

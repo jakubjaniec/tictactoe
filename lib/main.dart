@@ -5,9 +5,9 @@ import 'package:flutter/services.dart' as service;
 import 'package:device_preview/device_preview.dart';
 import 'package:provider/provider.dart';
 
-import 'package:TicTacToe/views/game.dart';
-import 'package:TicTacToe/views/home.dart';
-import 'package:TicTacToe/providers/game_provider.dart';
+import 'package:tictactoe/views/game.dart';
+import 'package:tictactoe/views/home.dart';
+import 'package:tictactoe/providers/game_provider.dart';
 
 void main() {
   runApp(

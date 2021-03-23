@@ -1,8 +1,8 @@
 import 'dart:async';
-import 'package:TicTacToe/providers/game_provider.dart';
+import 'package:tictactoe/providers/game_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:TicTacToe/widgets/general/shapes.dart';
+import 'package:tictactoe/widgets/general/shapes.dart';
 
 class Field extends StatefulWidget {
   final int row;
@@ -46,7 +46,7 @@ class _FieldState extends State<Field> {
       decoration: BoxDecoration(
         border: state.determineBorder(widget.row, widget.place),
       ),
-      child: FlatButton(
+      child: TextButton(
         onPressed: disabled == true
             ? null
             : () => handleClick(state.saveChoice, context),

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:TicTacToe/providers/game_provider.dart';
+import 'package:tictactoe/providers/game_provider.dart';
 
 class BackBtn extends StatelessWidget {
   @override

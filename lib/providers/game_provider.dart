@@ -12,7 +12,7 @@ class GameProvider extends ChangeNotifier {
   int draws = 0;
   bool restart = false;
 
-  List movesList = List.generate(3, (i) => List(3), growable: false);
+  List movesList = List.generate(3, (i) => List.filled(3, ''), growable: false);
 
   void saveChoice(int row, int place, BuildContext context) {
     if (xMove) {
@@ -124,7 +124,7 @@ class GameProvider extends ChangeNotifier {
     winner = '';
     draw = false;
     movesCounter = 0;
-    movesList = List.generate(3, (i) => List(3), growable: false);
+    movesList = List.generate(3, (i) => List.filled(3, ''), growable: false);
     notifyListeners();
   }
 

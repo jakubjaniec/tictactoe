@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
-import 'package:TicTacToe/providers/game_provider.dart';
-import 'package:TicTacToe/widgets/general/shapes.dart';
+import 'package:tictactoe/providers/game_provider.dart';
+import 'package:tictactoe/widgets/general/shapes.dart';
 
 class WhoseMove extends StatelessWidget {
   @override

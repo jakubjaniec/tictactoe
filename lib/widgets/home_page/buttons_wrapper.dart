@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:TicTacToe/widgets/home_page/button.dart';
+import 'package:tictactoe/widgets/home_page/button.dart';
 
 class ButtonsWrapper extends StatelessWidget {
   @override

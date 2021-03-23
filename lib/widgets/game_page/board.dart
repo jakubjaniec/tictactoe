@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:TicTacToe/widgets/game_page/field.dart';
+import 'package:tictactoe/widgets/game_page/field.dart';
 
 class Board extends StatelessWidget {
   @override

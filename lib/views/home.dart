@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:TicTacToe/widgets/general/shapes.dart';
-import 'package:TicTacToe/widgets/home_page/home_page_widgets.dart';
+import 'package:tictactoe/widgets/general/shapes.dart';
+import 'package:tictactoe/widgets/home_page/home_page_widgets.dart';
 
 class Home extends StatelessWidget {
   @override
